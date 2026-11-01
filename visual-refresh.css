@@ -1,0 +1,57 @@
+/* FocusFlow visual refresh: soft colour, clearer hierarchy, and friendlier motion. */
+:root{--bg:#f4f5fb;--surface:#fff;--ink:#20223a;--line:#e9eaf3;--purple:#7563e9;--purple-light:#f0edff;--shadow:0 14px 36px rgba(47,43,91,.07)}
+body{background:radial-gradient(ellipse at 88% 5%,#eeebff 0,transparent 27%),radial-gradient(ellipse at 48% 100%,#f1f4ff 0,transparent 32%),var(--bg)}
+.sidebar{box-shadow:8px 0 34px rgba(54,50,92,.025)}
+.brand{padding-bottom:46px;letter-spacing:-1.3px}
+.brand-mark{height:34px;width:34px;border-radius:12px;box-shadow:0 6px 14px #7764ed4a;transform:rotate(-5deg)}
+.nav-item{border-radius:10px;transition:background .18s,color .18s,transform .18s}
+.nav-item:hover{transform:translateX(2px)}
+.nav-item.active{box-shadow:inset 3px 0 0 var(--purple)}
+.focus-card{background:linear-gradient(145deg,#f0edff 0%,#f9f7ff 70%,#f1efff 100%);border:1px solid #eeebfb}
+.content{padding-top:39px}
+.welcome-row{position:relative;overflow:hidden;padding:2px 2px 22px}
+.welcome-row:after{content:'✳';position:absolute;right:33%;top:-28px;font-size:104px;line-height:1;color:#ece9ff;opacity:.62;pointer-events:none;animation:focus-drift 8s ease-in-out infinite}
+.welcome-row>div,.welcome-row>.primary-button{position:relative;z-index:1}
+.eyebrow{color:#8f83d2}
+.welcome-row h1{font-size:clamp(32px,3.3vw,42px);letter-spacing:-2px}
+.subheading{font-size:13px}
+.primary-button{border-radius:10px;padding:12px 18px;background:linear-gradient(135deg,#806df1,#6a58dc);box-shadow:0 7px 16px #7764ed3d}
+.summary-grid{gap:17px;margin-bottom:37px}
+.summary-card{border-radius:15px;padding:20px 21px 17px;position:relative;overflow:hidden;box-shadow:0 9px 24px rgba(38,38,78,.045);transition:transform .2s,box-shadow .2s}
+.summary-card:before{content:'';height:3px;position:absolute;left:0;right:0;top:0;background:linear-gradient(90deg,#8d7cf0,#c3b8ff);opacity:.8}
+.summary-card:nth-child(2):before{background:linear-gradient(90deg,#5ac69b,#b1e8d1)}
+.summary-card:nth-child(3):before{background:linear-gradient(90deg,#ef91ae,#f7ccda)}
+.summary-card:hover{transform:translateY(-3px);box-shadow:0 15px 29px rgba(38,38,78,.075)}
+.summary-icon{height:31px;width:31px;border-radius:10px}
+.summary-number{font-size:30px;margin:11px 0 10px}
+.section-heading{margin-bottom:18px}
+.section-heading h2{font-size:19px}
+.section-heading p{font-size:12px}
+.search-box,#sort-select{height:38px;border-radius:9px;transition:border .18s,box-shadow .18s}
+.search-box:focus-within,#sort-select:focus{border-color:#b8aff4;box-shadow:0 0 0 3px #8273e817}
+.search-box input{font-size:11px}
+.filter-pill{padding:7px 12px;font-size:11px;transition:background .18s,color .18s}
+.task-list{gap:10px}
+.task-card{border-radius:12px;padding:15px 17px;box-shadow:0 5px 17px rgba(38,38,78,.035);transition:transform .18s,border-color .18s,box-shadow .18s}
+.task-card:hover{transform:translateY(-2px);border-color:#dcd6ff;box-shadow:0 12px 24px rgba(60,49,120,.09)}
+.check-button{height:21px;width:21px;flex-basis:21px;border-radius:7px}
+.task-title{font-size:13px}
+.task-notes{font-size:11px}
+.tag{border-radius:6px;padding:5px 8px}
+.task-due{background:#f7f7fb;padding:6px 8px;border-radius:7px}
+.task-due.today{background:#fff6e8}.task-due.overdue{background:#fff0f1}
+.empty-state{border-radius:14px;background:linear-gradient(140deg,#fff,#fbfaff);border-color:#dedaf2;min-height:230px}
+.empty-illustration{height:49px;width:49px;border-radius:16px;box-shadow:0 6px 16px #7764ed20}
+.main-footer{margin-top:31px}
+.task-dialog{border-radius:18px}
+.toast{border-radius:11px;padding:12px 18px}
+.dark{--bg:#171824;--surface:#212231;--line:#333446}
+.dark body{background:radial-gradient(ellipse at 88% 5%,#282541 0,transparent 29%),var(--bg)}
+.dark .focus-card{background:linear-gradient(145deg,#29263c,#242333);border-color:#38334e}
+.dark .summary-card:before{opacity:.6}
+.dark .task-due{background:#292a3a}
+.dark .task-due.today{background:#3a3327}.dark .task-due.overdue{background:#3a282d}
+.dark .empty-state{background:linear-gradient(140deg,#212231,#242335)}
+@keyframes focus-drift{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(9px) rotate(8deg)}}
+@media(max-width:680px){.content{padding-top:27px}.welcome-row:after{right:18%;top:-17px;font-size:72px}.summary-grid{gap:10px}.summary-card{padding:15px 14px 13px}}
+@media(prefers-reduced-motion:reduce){.welcome-row:after{animation:none}.summary-card,.task-card,.nav-item{transition:none}}

@@ -1,0 +1,8 @@
+{
+  "name": "focusflow-task-planner",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A responsive task planner with a Node.js REST API and JSON persistence.",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" }
+}

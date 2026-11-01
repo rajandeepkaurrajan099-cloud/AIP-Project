@@ -1,0 +1,18 @@
+.side-category-icon{width:31px;height:31px;border-radius:10px;display:grid;place-items:center;flex:0 0 31px;background:linear-gradient(145deg,#edf4ff,#e5efff);color:#5686ca;box-shadow:inset 0 0 0 1px #dfebfb,0 2px 6px #5284c415;transition:transform .2s,box-shadow .2s}
+.side-category-icon svg,.tag-icon svg{width:19px;height:19px;display:block;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.category-nav:hover .side-category-icon{transform:translateY(-1px) rotate(-4deg);box-shadow:inset 0 0 0 1px #dce8fb,0 5px 10px #5284c425}
+.study-icon{background:linear-gradient(145deg,#f5efff,#eee5ff);color:#9168c9;box-shadow:inset 0 0 0 1px #e9defa,0 2px 6px #9874cb20}
+.personal-icon{background:linear-gradient(145deg,#fff5e9,#ffecd9);color:#d58942;box-shadow:inset 0 0 0 1px #fae9d4,0 2px 6px #dc985720}
+.category-nav.active .side-category-icon{filter:saturate(1.08);box-shadow:0 4px 10px #7770ad20}
+.tag-icon{display:inline-grid;width:25px;height:25px;place-items:center;margin-right:7px;color:#5796db;background:linear-gradient(145deg,#f2f8ff,#e7f2ff);border-radius:8px;box-shadow:inset 0 0 0 1px #e1edfb}
+.tag-icon svg{width:16px;height:16px}
+.tag.Study .tag-icon{color:#9168c9;background:linear-gradient(145deg,#f7f2ff,#eee6fa);box-shadow:inset 0 0 0 1px #ece2f8}
+.tag.Personal .tag-icon{color:#d58942;background:linear-gradient(145deg,#fff8ee,#fff0df);box-shadow:inset 0 0 0 1px #f8ead7}
+.tag.Work .tag-icon{color:#5686ca;background:linear-gradient(145deg,#f2f8ff,#e7f2ff);box-shadow:inset 0 0 0 1px #e1edfb}
+.tag.Work,.tag.Study,.tag.Personal{display:inline-flex;align-items:center;padding:3px 10px 3px 4px;border-radius:9px;font-weight:600}
+.tag.Work{background:#f4f8ff}.tag.Study{background:#f8f5ff}.tag.Personal{background:#fff8ef}
+.dark .side-category-icon{background:linear-gradient(145deg,#293a50,#253349);color:#9fc1ee}
+.dark .study-icon{background:linear-gradient(145deg,#3d3153,#352d45);color:#d0b2f3}
+.dark .personal-icon{background:linear-gradient(145deg,#493927,#3b3329);color:#f0c28a}
+.dark .tag.Work{background:#243449}.dark .tag.Study{background:#352c45}.dark .tag.Personal{background:#3d3328}
+.dark .tag.Work .tag-icon{background:#243449}.dark .tag.Study .tag-icon{background:#352c45}.dark .tag.Personal .tag-icon{background:#3d3328}
